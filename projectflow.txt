@@ -1,0 +1,60 @@
+1. Verify uv installation on the system
+2. Create a dir and open VScode pointing to that dir
+3. Execute following command: "uv init ."
+4. Execute following command: "uv add fastmcp"
+5. Execute following command-> ".venv\Scripts\Activate.ps1"
+6. Verify fastmcp installation: "fastmcp version"
+7. Add server code to main.py
+
+8. Command to run inspector -> "npx @modelcontextprotocol/inspector uv run python main.py"
+9. Command to run mcp server -> "uv run fastmcp run main.py"
+10. "uv run fastmcp install claude-desktop main.py" -> edit config of claudedesktop
+
+Optional step via editing config:
+---
+{
+  "mcpServers": {
+    "my-mcp-server": {
+      "command": "C:\\Users\\VijuJosephDEU\\VijuHome\\Personal\\BInaries\\python312\\Scripts\\uv.exe",
+      "args": [
+        "run",
+        "--directory",
+        "C:\\Users\\VijuJosephDEU\\VijuHome\\Personal\\ArtificialIntelligence\\CluadeDesktop\\M6-mcp-series-localserver",
+        "python",
+        "main.py"
+      ]
+    }
+  }
+}
+---
+
+** Steps to deploy our MCP server **
+-------------------------------------
+**Optional Steps A-H**
+A> Create a new folder & open in VSCode
+B> Install & verify uv installation: "where uv" or "uv version"
+C> Execute the command "uv init ."
+D> Run -> "uv add fastmcp"
+E> Activate the project venv before working: -> ".venv\Scripts\Activate.ps1"
+F> Verify: "fastmcp version"
+G> Add code to main.py file
+H> Also test on MCP inspector by doing: 
+Terminal1: "uv run python main.py"
+Terminal2: "npx @modelcontextprotocol/inspector uv run python main.py"
+
+I> Git Setup after creating a new github repo:
+git init
+git add README.md
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/vijujoseph/remote-mcp-helpdesk-server.git
+git push -u origin main
+
+J> create a requirements.txt -> fastmcp
+K> Go to railway.com, signup & auth with github, select the repo & deploy
+L> Click on the service card -> deployment -> logs; to check if app is running or not
+M> Service card -> settings -> find: networking -> if no public domain exists, click -> Generate Domain
+(it will create something like: https://your-app-production.up.railway.app)
+
+N> Add this domain to our custom connect as: https:domain/mcp; then just restart claude
