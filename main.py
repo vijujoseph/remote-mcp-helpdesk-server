@@ -24,7 +24,7 @@ def classify_ticket(issue_description: str) -> dict:
         category = "Hardware"
         team = "Desktop Support"
 
-    elif any(word in issue for word in ["Storage", "RAM", "Memory"]):
+    elif any(word in issue for word in ["storage", "ram", "memory", "disk"]):
         category = "Storage"
         team = "Storage Support"
 
