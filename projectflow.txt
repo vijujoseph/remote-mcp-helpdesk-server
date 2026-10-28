@@ -55,6 +55,6 @@ J> create a requirements.txt -> fastmcp
 K> Go to railway.com, signup & auth with github, select the repo & deploy
 L> Click on the service card -> deployment -> logs; to check if app is running or not
 M> Service card -> settings -> find: networking -> if no public domain exists, click -> Generate Domain
-(it will create something like: https://your-app-production.up.railway.app)
+(it will create something like: https://remote-mcp-helpdesk-server.onrender.com/mcp)
 
 N> Add this domain to our custom connect as: https:domain/mcp; then just restart claude
